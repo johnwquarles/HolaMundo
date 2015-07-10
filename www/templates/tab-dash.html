@@ -1,16 +1,28 @@
 <ion-view view-title="Search">
-  <ion-content class="padding">
+  <ion-content class="padding" ng-controller='DashCtrl'>
 
     <div class="list">
+
+    <br>
+    <br>
+    <br>
+
+      <h1>{{data_object.text[0]}}</h1>
 
       <label class="item item-input item-select">
         <div class="input-label">
           Language
         </div>
-        <select>
+        <select ng-model="language">
           <option selected>English</option>
           <option>Spanish</option>
-          <option>French</option>
+          <option>Albanian</option>
+          <option>Chinese</option>
+          <option>German</option>
+          <option>Greek</option>
+          <option>Japanese</option>
+          <option>Russian</option>
+          <option>Thai</option>
         </select>
       </label>
     </div>
@@ -18,9 +30,13 @@
     <div class="list list-inset">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search for word">
+        <input type="text" placeholder="Search for word" ng-model="query">
       </label>
     </div>
-    
+
+    <button class="button button-positive button-block" ng-click="api_call()">
+      Search
+    </button>
+
   </ion-content>
 </ion-view>

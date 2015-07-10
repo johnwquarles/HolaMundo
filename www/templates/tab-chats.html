@@ -1,16 +1,5 @@
 <ion-view view-title="Translations">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right">
-        <!-- <img ng-src="{{chat.face}}"> -->
-        <!-- <h2>{{chat.name}}</h2> -->
-        <!-- <p>{{chat.lastText}}</p> -->
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
+  <ion-content ng-controller='DashCtrl'>
+    <p>{{data_object.text[0]}}</p>
   </ion-content>
 </ion-view>
